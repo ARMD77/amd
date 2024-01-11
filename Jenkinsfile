@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "${Built-In-Node}"
+        label "${master}"
            } 
       tools { 
       maven 'M2_HOME' 
@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/*']], extensions: [], userRemoteConfigs: [[credentialsId: 'armduser', url: 'https://github.com/ARMD77/be.git']])
+                checkout "scmGit(branches: [[name: '*/*']], extensions: [], userRemoteConfigs: [[credentialsId: 'armduser', url: 'https://github.com/ARMD77/be.git']])"
             }
         }
         stage('Package')  {
