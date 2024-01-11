@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        Built-In-Node
+        label "${Built-In-Node}"
            } 
       tools { 
       maven 'M2_HOME' 
