@@ -1,5 +1,5 @@
 pipeline {
-    agent Built-In-Node
+    agent "Built-In-Node"
       tools { 
       maven 'MAVEN_HOME' 
       jdk 'JAVA_HOME' 
