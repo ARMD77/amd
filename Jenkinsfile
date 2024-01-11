@@ -1,7 +1,9 @@
 pipeline {
-    agent "Built-In-Node"
+    agent {
+        Built-In-Node
+           } 
       tools { 
-      maven 'MAVEN_HOME' 
+      maven 'M2_HOME' 
       jdk 'JAVA_HOME' 
     }
     stages {
