@@ -7,11 +7,6 @@ pipeline {
       jdk 'JAVA_HOME' 
     }
     stages {
-        stage('Checkout') {
-            steps {
-                checkout "scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'armduser', url: 'https://github.com/ARMD77/be.git']])"
-            }
-        }
         stage('Package')  {
             steps {
                 sh 'mvn package'    
