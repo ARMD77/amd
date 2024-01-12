@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label "${master}"
-           } 
+    agent {label master}
       tools { 
       maven 'M2_HOME' 
       jdk 'JAVA_HOME' 
