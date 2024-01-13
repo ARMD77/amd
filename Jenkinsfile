@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github_PASSWD', url: 'https://github.com/ARMD77/be.git']])
+                checkout scmGit(branches: [[name: '*/Feature/BE']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github_PASSWD', url: 'https://github.com/ARMD77/be.git']])
             }
         }
         
