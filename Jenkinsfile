@@ -1,15 +1,21 @@
 pipeline {
-    agent {
-        label 'master'
-    }
-      tools { 
+    agent { label 'master' }
+  
+    tools { 
       maven 'M2_HOME' 
       jdk 'JAVA_HOME' 
-    }
+        }
+
     stages {
-        stage('Package')  {
+        stage('Checkout') {
             steps {
-                sh 'mvn package'    
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github_PAT', url: 'https://github.com/ARMD77/be.git']])
+            }
+        }
+        
+        stage('Package') {
+            steps {
+                sh 'mvn package'
             }
         }
     }
