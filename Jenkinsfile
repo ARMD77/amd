@@ -10,8 +10,7 @@ node {
   -Dsonar.projectName='SBA_Backend_Code' \
   -Dsonar.host.url=http://43.205.214.173:9000 \
   -Dsonar.token=sqp_06bf73b8c1dc9fc122ad0ac091ffb92e589e93fd  
-  
-  '''
+    '''
     }
   }
 }
