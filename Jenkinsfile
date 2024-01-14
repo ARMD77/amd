@@ -12,5 +12,12 @@ node {
   -Dsonar.token=sqp_06bf73b8c1dc9fc122ad0ac091ffb92e589e93fd  
     '''
     }
+    stage('Quality Gate') {
+      steps {
+        timeout (time: 4 , unit: 'MINUTES') {
+          waitForQualityGate  abortPipeline: true
+        }
+      }
+    }
   }
 }
