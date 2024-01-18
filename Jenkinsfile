@@ -7,11 +7,11 @@ node {
     withSonarQubeEnv() {
       sh "${scannerHome}/bin/sonar-scanner"
       sh '''
-      sonar-scanner \
+mvn clean verify sonar:sonar \
   -Dsonar.projectKey=SBA_Backend_Code1 \
-  -Dsonar.sources=. \
+  -Dsonar.projectName='SBA_Backend_Code1' \
   -Dsonar.host.url=http://3.111.149.70:9000 \
-  -Dsonar.token=sqp_89dad721e1995fdf74e60096167fe75ec782d244
+  -Dsonar.token=sqp_f09afa17da34b3b480b705463d1d184d54865497
   '''
     }
   }
