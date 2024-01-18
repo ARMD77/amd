@@ -3,7 +3,7 @@ node {
     checkout scm
    }
   stage('SonarQube Analysis') {
-    def scannerHome = tool 'sonarqube';
+    def scannerHome = tool 'SonarScanner';
     withSonarQubeEnv() {
       sh ''' mvn clean verify sonar:sonar \
   -Dsonar.projectKey=SBA_Backend_Code \
